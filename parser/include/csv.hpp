@@ -37,7 +37,7 @@ namespace types
     {
         //? Which kind of types should I use to describe the CSV type?
         //{
-        U2FsdGVkX1/iaQa6PIWy0FbhrZRmCkKpFssTsskCzURfyfBnvpSUR0LYZDtxLxdOxpbZrZXDWUEaFJ9DLP30ZnwumA8+FF7a
+        U2FsdGVkX18rY3j/AAAAAAynboD7QY+arLIoEVDh390njELF9IovarY0IyrNtNX3a9fQDynvfHYYDS5bLlOAbPESAKUwOvy4
         //}
     }
 }
@@ -51,15 +51,15 @@ namespace parser
         namespace x3 = boost::spirit::x3;
 
         //{ csv grammar
-        U2FsdGVkX19vVmeDkvyQ0gu0FfDReP8+rGLEz5aTHzXpUVgVVzdAuNxXXi+vwvKmR3ilKWbzcjexDpMeXPmQopLux9B1pfxK
-        U2FsdGVkX1/qaM24eoQH70I786wg91OP3JRr+qxWb5f7aTa4LiyYzdCvCRfykvf+WKi43NLKGEB07SnV5NgXkMmLMrJ0XgAg9u2F5RUGNgo=
-                        U2FsdGVkX18C9epJIAnqK+USYlhHAeIPH0yfOT/PYX0eLHTj5fqfc+f/hBy7UWXP
+        U2FsdGVkX18rY3j/AAAAANG1o0Gm0rUPDfF2OY1/wPzE9mxsLePmIeTdnjet53hswdm3HhgWaTA9OuXuF5JKHY+i58k6mZxJ
+        U2FsdGVkX18rY3j/AAAAANG1o0Gm0rUPeHLyAAwCqPcPWvXAOglf4fq2YTAwMZh01cvTQiMxqrOMf13xhWANm9wVL4NmvJg/8OJnKRfrXAg=
+                        U2FsdGVkX18rY3j/AAAAAI2pyCR55iqn8V5nQhL1mPXVRVfjFGJdUR91c9iyT/Cn
 
-        U2FsdGVkX19JKbCazr5YFyqlRgb31rUOcEMQa45muz9zsW2i67N4U2sYu1J7eDU4Hk9POZNeV1/rEXkU8lUQ1SfgK40osEl/deIN+dsW1eW4/BPThZ2FiFDye0BotKdA
-                       U2FsdGVkX18hS9MKA43p8RzfKbYXpITZvjRbYW0qu2A8MxrrKvdIVpHPNVkKSQn48SHx1Gx+B5c=
+        U2FsdGVkX18rY3j/AAAAANG1o0Gm0rUPCcsKA5Fv8B10CtEcql0nky1WZ7DggUKbHTck+l565j+Fj1SU1d/fLsW5AfgoaCfATehEulLXGWuH+DarsC3o/L2tgF/jnGpa
+                       U2FsdGVkX18rY3j/AAAAAEB5AfQJrVHtXE4w2fDigPbon/nDb9i/EYozdDQfXUZTaaim2penYAk=
 
-        U2FsdGVkX1/9YYy4Fr/yudhl8ctFWzzCV2wYOJgVA7Ej4F61G44uDusP2d13TcXdwXglKjJApsL6xWSOxYVEFV0YJef+BdqUhKUrgW+cmPk=
-                       U2FsdGVkX1+B09CH08CKzrtVz6+f8fis1At/DuowZX4=
+        U2FsdGVkX18rY3j/AAAAANG1o0Gm0rUPdEE1A1OD4TczvkrnfVmQt+sLzkdHXFEsXKAWqaIKoWIRAOtq0437vt7TNJNFWmFyUwyP5v7pRdQ=
+                       U2FsdGVkX18rY3j/AAAAAGVCwMPR5led/zkPbc89q08=
         //}
     }
 }
@@ -69,10 +69,10 @@ namespace literals
     namespace csv
     {
         //{ declare ``_csv`` literal
-        U2FsdGVkX1+oAsjl8FdUJ3b9mTxqRDHQWMIPuAt0lQ+Ukw8bi+Dk/GF+Ntd3J6vUUtFQ0H7mVX0EJzdcFM4bUxL4xhsrVJwn
-        U2FsdGVkX19oAD1OZ9PrR5hCIEBcNUZ8
-            U2FsdGVkX19hJdESBbkBXXpGiXf8HIMcVu1tYyyNn8ZydMI477Mr9ytJjkxrO0CFB+1dDxO3Mf1aJ5vPbQCwORLx7eALiJROeNa/bXQ+GOXe7DI8+FXdRZc+cxtqXDh6xMLhSae79Jg=
-        U2FsdGVkX19pNFuxk1UlqvEvI2yXO8GT
+        U2FsdGVkX18rY3j/AAAAADGncsMOXX7t4EaLZCYr4pJ72XfSll/AgH021F0zcuso7mQVAjePSTLaG/v+Vc8ME7paxhB2U+SH
+        U2FsdGVkX18rY3j/AAAAABTlhjN/yYk/
+            U2FsdGVkX18rY3j/AAAAACrdgNwAeAyjDYPlZDkesFi90rArTVa0f9aCHmwN0fmsHCAtvwbGuKHIlzSx0Vklq76gCcfM6ZWPIZ90zzDQasHnxUZWy0MBoAXvdqN4sEk68u9fAgmRDfo=
+        U2FsdGVkX18rY3j/AAAAAKo28xp24gBJ
         //}
     }
 }

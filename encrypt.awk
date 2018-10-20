@@ -18,9 +18,9 @@ flag && length($0) {
     gsub(/^[ ]+/, "")
 
     if (enc) {
-        cmd = "openssl enc -e -bf -salt -a -A -k " password
+        cmd = "openssl enc -e -bf -S 2b6378ff -a -A -k " password
     } else {
-        cmd = "openssl enc -d -bf -salt -a -A -k " password
+        cmd = "openssl enc -d -bf -S 2b6378ff -a -A -k " password
     }
 
     print | cmd
