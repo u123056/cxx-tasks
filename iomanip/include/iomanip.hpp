@@ -22,10 +22,10 @@ public:
     explicit squares_proxy(std::ostream& os):os(os){}
     template<typename T>
     friend std::ostream & operator<<(squares_proxy const& q, T const& word) {
-        return q.os << "[" << word << "]";
+        return q.str<< "[" << word << "]";
     }
 private:
-    std::ostream & os;
+    std::ostream & str;
 };
 struct squares_creator { } squares;
 squares_proxy operator<<(std::ostream& os, squares_creator) {
@@ -36,19 +36,19 @@ squares_proxy operator<<(std::ostream& os, squares_creator) {
 struct add_proxy_next {
     explicit add_proxy_next(std::ostream & os, long const& num): os(os), previous_num(num) {}
     std::ostream& operator<<(long const& current_num) {
-        return os << previous_num + current_num;
+        return str << previous_num + current_num;
     }
 private:
-    std::ostream & os;
+    std::ostream & str;
     long previous_num;
 };
 struct add_proxy {
     explicit add_proxy(std::ostream & os): os(os) {}
     struct add_proxy_next operator<<(long const& current_num) {
-        return add_proxy_next(os, current_num);
+        return add_proxy_next(str, current_num);
     }
 private:
-    std::ostream & os;
+    std::ostream & str;
 };
 struct add_creator { } add;
 add_proxy operator<<(std::ostream & os, add_creator) {
