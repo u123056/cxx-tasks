@@ -26,8 +26,8 @@ public:
 
     void advance(typename image_iterator::difference_type n)
     {
-        size_t r = (n > 0) ? width_ - index_ % stride_  - 1: index_ % stride_;
-        size_t count = 0;
+        int r = (n > 0) ? width_ - index_ % stride_  - 1: index_ % stride_;
+        int count = 0;
 
         if (abs(n) > r)
         {
