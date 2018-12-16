@@ -39,13 +39,13 @@ public:
     template<class T>
     A& as()
     {
-        return (*this)[detail::type_to_index<T, types>().v];
+       return const_cast<A&>(const_cast<const type_map*>(this)->as<T>());
     }
     
     template<class T>
     const A& as() const
     {
-        return (*this)[detail::type_to_index<T, types>().v];
+       return (*this)[detail::type_to_index<T, types>::v];
     }
 };
 //}
@@ -53,7 +53,7 @@ public:
 namespace std
 {
     template<typename T, class TypeMap>
-    const auto& get(TypeMap& tm)
+    const auto& get(const TypeMap& tm)
     {
         return tm.template as<T>();
     }
