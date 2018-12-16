@@ -22,6 +22,9 @@ struct variant_decorator: public x3::variant<U...>
     using x3::variant<U...>::operator=;
     using x3::variant<U...>::variant;
 
+    variant_decorator(variant_decorator const&)=default;
+    variant_decorator& operator=(variant_decorator const&)=default;
+
     //? Do I need a ``const``-version?
     template<class T>
     T& as()
