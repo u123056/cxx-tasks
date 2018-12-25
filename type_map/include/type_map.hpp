@@ -53,7 +53,7 @@ public:
 namespace std
 {
     template<typename T, class TypeMap>
-    const auto& get(const TypeMap& tm)
+    auto& get(TypeMap& tm)
     {
         return tm.template as<T>();
     }
