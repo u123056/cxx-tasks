@@ -8,7 +8,7 @@
 #define __PROXY_HPP__
 
 #include <mutex>
-using namespace std;
+
 template<class T>
 class ptr_holder
 {
@@ -16,18 +16,10 @@ public:
     ptr_holder(T* ptr): ptr_(ptr) {}
 
     //{ describe proxy object
-    class proxy
+    class proxy : std::lock_guard<std::mutex>
     {
     public:
-        proxy (T* ptr, mutex& mutex): ptr_ (ptr), mutex_(mutex)
-        {
-            mutex.lock();
-        }
-
-        ~proxy()
-        {
-            mutex_.unlock();
-        }
+        proxy (T* ptr, std::mutex& mutex): ptr_ (ptr), std::lock_guard<std::mutex>(mutex) {}
 
         T* operator ->() const {
             return ptr_ ;
@@ -35,18 +27,17 @@ public:
 		
     private:
         T* ptr_ ;
-        mutex &mutex_;
     };
 
     proxy operator -> () const
     {
-        return proxy(ptr_, ref(mutex_));
+        return proxy(ptr_, mutex_);
     }
     //}
 
 private:
     T* ptr_;
-    mutable mutex mutex_;
+    mutable std::mutex mutex_;
 };
 
 #endif // __PROXY_HPP__
