@@ -50,12 +50,30 @@ public:
 
     void increment()
     {
-        advance(1);
+        if (width_ - index_ % stride_  - 1 > 0)
+        {
+            this->base_reference()++;
+            index_++;
+        }
+        else
+        {
+            this->base_reference() += stride_ - width_ + 1;
+            index_ += stride_ - width_ + 1;
+        }
     }
 
     void decrement()
     {
-        advance(-1);
+        if (index_ % stride_ > 0)
+        {
+            this->base_reference()--;
+            index_--;
+        }
+        else
+        {
+            this->base_reference() -= stride_ - width_ + 1;
+            index_ -= stride_ - width_ + 1;
+        }
     }
 
 private:
