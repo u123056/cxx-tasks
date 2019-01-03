@@ -19,7 +19,7 @@ public:
     class proxy : std::lock_guard<std::mutex>
     {
     public:
-        proxy (T* ptr, std::mutex& mutex): ptr_ (ptr), std::lock_guard<std::mutex>(mutex) {}
+        proxy (T* ptr, std::mutex& mutex): std::lock_guard<std::mutex>(mutex), ptr_(ptr) {}
 
         T* operator ->() const {
             return ptr_ ;
