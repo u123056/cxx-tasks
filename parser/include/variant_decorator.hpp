@@ -12,6 +12,7 @@
 namespace x3 = boost::spirit::x3;
 
 //? How to inherit x3::variant constructor & ``operator=``?
+//! Нужно использовать using 
 //? Why I need inherited constructor & ``operator=``?
 //? How many constructors did I inherit?
 //? Do I need my own constructor & ``operator=``? Why?
