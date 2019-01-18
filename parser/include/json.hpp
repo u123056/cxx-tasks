@@ -51,7 +51,9 @@ namespace parser
     namespace json
     {
         //? Why I need ``sfloat_`` instead of just ``x3::float_``?
+        //!Чтобы любое целое число было с точкой(не 31, а 31.0,например)
         //? What is the syntax ``class array_``? Is it wrong?
+        //!Когда мы используем "class array_" мы говорим компилятору, что мы ещё не опрделили класс array_, но мы сделаем это позже.
         const auto sfloat_ = x3::real_parser<float, x3::strict_real_policies<float>>();
 
         //{ describe json grammar
